@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center; /* Center-align the content of the cells */
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+td:nth-child(4) { /* Postal Code column */
+    width: 150px; /* Adjust the width as needed */
+}
+
+td:nth-child(5) { /* Phone Number column */
+    width: 250px; /* Increase the width */
+    white-space: nowrap; /* Prevent line breaks within the cell */
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button-container button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer
+}
+
+.button-container button:hover {
+    background-color: #073ba4; /* Slightly darker cyan for hover effect */
+}
+
+@media (max-width: 600px) {
+    table {
+        width: 90%;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    td:nth-child(4), /* Postal Code column */
+    td:nth-child(5) { /* Phone Number column */
+        width: auto; /* Revert to automatic width on smaller screens */
+    }
+}

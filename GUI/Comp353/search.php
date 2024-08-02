@@ -1,54 +1,39 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Include the database connection file
-    require_once "dbconnection.php";
+    require_once "db_files/db_connection.php";
 
     try {
         // Prepare the SQL query
         $query = "
-            SELECT
-                l.address,
-                l.city,
-                l.province,
-                l.postalCode,
-                l.phoneNumber,
-                l.webAddress,
-                l.type,
-                l.capacity,
-                (
-                SELECT
-                    CONCAT(p.firstName, ' ', p.lastName)
-                FROM 
-                    Person p,
-                    Personnels pl,
-                    Manages m
-                WHERE 
-                    l.locationID = m.locationID
-                    AND ISNULL(m.endDate)
-                    AND m.personID = pl.personID
-                    AND pl.personID = p.personID
-                ) AS 'General Manager Name',
-                (
-                SELECT
-                    COUNT(aw.clubMemberID)
-                FROM 
-                    AssociatedWith aw,
-                    Person p,
-                    ClubMembers cm
-                WHERE 
-                    l.locationID = aw.locationID
-                    AND aw.clubMemberID = cm.personID
-                    AND cm.personID = p.personID
-                    AND ISNULL(aw.endDate)
-                        AND TIMESTAMPDIFF(YEAR,
-                        p.DOB,
-                        CURDATE()) BETWEEN 4 AND 10
-                ) AS 'Club Members Count'
-            FROM
-                Location l
-            ORDER BY
-                l.province,
-                l.city;
+    SELECT
+    L.address,
+    L.city,
+    L.province,
+    L.postalCode,
+    L.phoneNumber,
+    L.webAddress,
+    L.type,
+    L.capacity,
+    CONCAT(P.firstName, ' ', P.lastName) AS generalManagerName,
+    IFNULL(CM.clubMemberCount, 0) AS numberOfClubMembers
+FROM
+    Location L
+    LEFT JOIN Manages M ON L.locationID = M.locationID AND M.endDate IS NULL
+    LEFT JOIN Person P ON M.personID = P.personID
+    LEFT JOIN (
+        SELECT
+            LA.postalCode,
+            COUNT(CM.personID) AS clubMemberCount
+        FROM
+            Lives_At LA
+            JOIN ClubMember CM ON LA.personID = CM.personID
+        GROUP BY
+            LA.postalCode
+    ) CM ON L.postalCode = CM.postalCode
+ORDER BY
+    L.province ASC,
+    L.city ASC;
         ";
 
         $stmt = $pdo->prepare($query);
@@ -77,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="search2.css">
+    <link rel="stylesheet" type="text/css" href="css_Files/search2.css">
     <title>Search</title>
 </head>
 <body>
@@ -93,6 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<table>";
         echo "<thead>";
         echo "<tr>
+                <th>Location ID</th>
                 <th>Address</th>
                 <th>City</th>
                 <th>Province</th>
@@ -108,6 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<tbody>";
         foreach ($results as $row) {
             echo "<tr>";
+            echo "<td>" . htmlspecialchars($row["locationID"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["address"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["city"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["province"]) . "</td>";

@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/195464fa-0ae6-4137-8922-13d0970f5e11/resourceGroups/comp353/providers/Microsoft.Web/sites/ysc-center",
+    "appService.deploySubpath": "."
+}

@@ -1,0 +1,45 @@
+/* Apply basic styling to the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Style for the heading */
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container for the forms */
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px; /* Adjust the gap between forms */
+}
+
+/* Style for each form */
+.search {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+}

@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>user</title>
+    <link rel="stylesheet" type="text/css" href="css_Files/main_page.css">
+    <title>Main Page</title>
 </head>
 <body>
 
-<h3> Welcome to COMP 353 _ Group 1 </h3>
+<h3> Welcome To Youth Soccer Club </h3>
 
-<form action="dbinsert.php" method="post">
-    <input type="text" name="firstname" placeholder="Firstname" required>
-    <br><br>
-    <input type="text" name="lastname" placeholder="Lastname" required>
-    <br><br>
-    <input type="number" name="SSN" placeholder="SSN" required>
-    <br><br>
-    <button type="submit">Submit</button>
-</form>
+<div class="form-container">
+    <form class="search" action="user.php" method="post">
+        <label for="search">Queries 1 - 6</label>
+        <button>Click here</button>
+    </form>
+    <form class="search" action="client.php" method="post">
+        <label for="search">Queries 7 - 21</label>
+        <button>Click here</button>
+    </form>
+</div>
 
 </body>
 </html>
