@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $personnelID = intval($_POST["personnelID"]);
     $firstName = htmlspecialchars($_POST["firstName"]);
     $lastName = htmlspecialchars($_POST["lastName"]);
-    $dateOfBirth = htmlspecialchars($_POST["DOB"]);
+    $DOB = htmlspecialchars($_POST["DOB"]);
     $SSN = htmlspecialchars($_POST["SSN"]);
     $medicareNumber = htmlspecialchars($_POST["medicareNumber"]);
     $telephoneNumber = htmlspecialchars($_POST["telephoneNumber"]);
@@ -16,6 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $province = htmlspecialchars($_POST["province"]);
     $postalCode = htmlspecialchars($_POST["postalCode"]);
     $email = htmlspecialchars($_POST["email"]);
+    $role = htmlspecialchars($_POST["role"]);
+    $mandate = htmlspecialchars($_POST["mandate"]);
 
     // Initialize the SQL query parts
     $setClause = [];
@@ -30,9 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $setClause[] = "lastName = :lastName";
         $params[':lastName'] = $lastName;
     }
-    if (!empty($dateOfBirth)) {
-        $setClause[] = "dateOfBirth = :dateOfBirth";
-        $params[':dateOfBirth'] = $dateOfBirth;
+    if (!empty($DOB)) {
+        $setClause[] = "dateOfBirth = :DOB";
+        $params[':DOB'] = $DOB;
     }
     if (!empty($SSN)) {
         $setClause[] = "SSN = :SSN";
@@ -66,40 +68,82 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $setClause[] = "emailAddress = :email";
         $params[':email'] = $email;
     }
+    if (!empty($role)) {
+        $setClause[] = "role = :role";
+        $params[':role'] = $role;
+    }
+    if (!empty($mandate)) {
+        $setClause[] = "mandate = :mandate";
+        $params[':mandate'] = $mandate;
+    }
 
     // Ensure at least one field is provided
     if (empty($setClause)) {
         die("No fields to update.");
     }
 
-    // Create the SQL query
-    $sql = "UPDATE Person SET " . implode(", ", $setClause) . " WHERE personID = :personnelID";
-    $params[':personnelID'] = $personnelID;
-
     try {
         // Start a transaction
         $pdo->beginTransaction();
 
-        // Prepare and execute the update statement
+        // Update the Personnel table
+        $sql = "UPDATE Personnel SET " . implode(", ", $setClause) . " WHERE personID = :personnelID";
+        $params[':personnelID'] = $personnelID;
         $stmt = $pdo->prepare($sql);
         $stmt->execute($params);
 
-        // Check if any rows were affected
-        if ($stmt->rowCount() > 0) {
-            // Commit the transaction
-            $pdo->commit();
+        // Retrieve the current locationID for the personnel
+        $sql = "SELECT locationID FROM Operates WHERE personID = :personnelID ORDER BY startDate DESC LIMIT 1";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([':personnelID' => $personnelID]);
+        $locationID = $stmt->fetchColumn();
 
-            // Close the statement and database connection
-            $stmt = null;
-            $pdo = null;
-
-            // Redirect to the success page with a message
-            header("Location: ../success.php?message=Personnel+updated+successfully");
-            exit();
-        } else {
-            // No rows affected, meaning no matching record was found or no changes were made
-            throw new Exception("No matching personnel found or no changes made.");
+        // Retrieve the current locationID for the personnel from Manages table if not found in Operates
+        if (!$locationID) {
+            $sql = "SELECT locationID FROM Manages WHERE personID = :personnelID ORDER BY startDate DESC LIMIT 1";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([':personnelID' => $personnelID]);
+            $locationID = $stmt->fetchColumn();
         }
+
+        // Check the role and update the respective tables accordingly
+        if (!empty($role)) {
+            $currentDate = date('Y-m-d');
+            if ($role == 'Administrator') {
+                // Update Operates table endDate
+                $sql = "UPDATE Operates SET endDate = :currentDate WHERE personID = :personnelID AND endDate IS NULL";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([':currentDate' => $currentDate, ':personnelID' => $personnelID]);
+
+                // Insert or update Manages table
+                $sql = "INSERT INTO Manages (personID, startDate, locationID) VALUES (:personnelID, :currentDate, :locationID)
+                        ON DUPLICATE KEY UPDATE endDate = NULL";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([':currentDate' => $currentDate, ':personnelID' => $personnelID, ':locationID' => $locationID]);
+            } else {
+                // Update Manages table endDate
+                $sql = "UPDATE Manages SET endDate = :currentDate WHERE personID = :personnelID AND endDate IS NULL";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([':currentDate' => $currentDate, ':personnelID' => $personnelID]);
+
+                // Insert or update Operates table
+                $sql = "INSERT INTO Operates (personID, startDate, locationID) VALUES (:personnelID, :currentDate, :locationID)
+                        ON DUPLICATE KEY UPDATE endDate = NULL";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([':currentDate' => $currentDate, ':personnelID' => $personnelID, ':locationID' => $locationID]);
+            }
+        }
+
+        // Commit the transaction
+        $pdo->commit();
+
+        // Close the statement and database connection
+        $stmt = null;
+        $pdo = null;
+
+        // Redirect to the success page with a message
+        header("Location: ../success.php?message=Personnel+updated+successfully");
+        exit();
 
     } catch (PDOException $e) {
         // Rollback the transaction if something failed

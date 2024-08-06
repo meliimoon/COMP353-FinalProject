@@ -4,11 +4,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require_once "../db_files/db_connection.php";
 
     // Collect POST data and sanitize it
-    $locationID = htmlspecialchars($_POST["locationID"]);
+    $locationID = intval($_POST["locationID"]);
 
     try {
         // Prepare the SQL query to select from the Location table
-        $query = "SELECT * FROM Location WHERE locationID = :locationID";
+        $query = "SELECT l.locationName, l.phoneNumber, l.webAddress, l.type, l.capacity,
+                         ld.address, ld.city, ld.province, fa.postalCode
+                  FROM Location l
+                  LEFT JOIN Found_At fa ON l.locationID = fa.locationID
+                  LEFT JOIN LocationDetails ld ON fa.postalCode = ld.postalCode
+                  WHERE l.locationID = :locationID";
         $stmt = $pdo->prepare($query);
 
         // Execute the prepared statement with the collected data

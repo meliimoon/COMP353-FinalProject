@@ -6,34 +6,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Prepare the SQL query
         $query = "
-    SELECT
-    L.address,
-    L.city,
-    L.province,
-    L.postalCode,
-    L.phoneNumber,
-    L.webAddress,
-    L.type,
-    L.capacity,
-    CONCAT(P.firstName, ' ', P.lastName) AS generalManagerName,
-    IFNULL(CM.clubMemberCount, 0) AS numberOfClubMembers
-FROM
-    Location L
-    LEFT JOIN Manages M ON L.locationID = M.locationID AND M.endDate IS NULL
-    LEFT JOIN Person P ON M.personID = P.personID
-    LEFT JOIN (
-        SELECT
-            LA.postalCode,
-            COUNT(CM.personID) AS clubMemberCount
-        FROM
-            Lives_At LA
-            JOIN ClubMember CM ON LA.personID = CM.personID
-        GROUP BY
-            LA.postalCode
-    ) CM ON L.postalCode = CM.postalCode
-ORDER BY
-    L.province ASC,
-    L.city ASC;
+            SELECT
+                L.locationID,
+                L.locationName,
+                LD.address,
+                LD.city,
+                LD.province,
+                LD.postalCode,
+                L.phoneNumber,
+                L.webAddress,
+                L.type,
+                L.capacity,
+                COALESCE(CONCAT(P.firstName, ' ', P.lastName), 'No General Manager') AS generalManagerName,
+                COUNT(DISTINCT A.clubMemberID) AS numOfClubMembers
+            FROM
+                Location L
+            LEFT JOIN
+                Found_At FA ON L.locationID = FA.locationID
+            LEFT JOIN
+                LocationDetails LD ON FA.postalCode = LD.postalCode
+            LEFT JOIN
+                Manages M ON L.locationID = M.locationID AND M.endDate IS NULL
+            LEFT JOIN
+                Personnel Per ON M.personID = Per.personID AND Per.role = 'Administrator'
+            LEFT JOIN
+                Person P ON Per.personID = P.personID 
+            LEFT JOIN
+                Assignment A ON L.locationID = A.locationID AND M.endDate IS NULL
+            GROUP BY
+                L.locationID, L.locationName, LD.address, LD.city, LD.province, LD.postalCode, L.phoneNumber, L.webAddress, L.type, L.capacity, P.firstName, P.lastName
+            ORDER BY
+                LD.province ASC, LD.city ASC;
         ";
 
         $stmt = $pdo->prepare($query);
@@ -79,6 +82,7 @@ ORDER BY
         echo "<thead>";
         echo "<tr>
                 <th>Location ID</th>
+                <th>Location Name</th>
                 <th>Address</th>
                 <th>City</th>
                 <th>Province</th>
@@ -95,16 +99,17 @@ ORDER BY
         foreach ($results as $row) {
             echo "<tr>";
             echo "<td>" . htmlspecialchars($row["locationID"]) . "</td>";
+            echo "<td>" . htmlspecialchars($row["locationName"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["address"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["city"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["province"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["postalCode"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["phoneNumber"]) . "</td>";
-            echo "<td>" . htmlspecialchars($row["webAddress"]) . "</td>";
+            echo "<td><a href='" . htmlspecialchars($row["webAddress"]) . "' target='_blank'>" . htmlspecialchars($row["webAddress"]) . "</a></td>";
             echo "<td>" . htmlspecialchars($row["type"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["capacity"]) . "</td>";
-            echo "<td>" . htmlspecialchars($row["General Manager Name"]) . "</td>";
-            echo "<td>" . htmlspecialchars($row["Club Members Count"]) . "</td>";
+            echo "<td>" . htmlspecialchars($row["generalManagerName"]) . "</td>";
+            echo "<td>" . htmlspecialchars($row["numOfClubMembers"]) . "</td>";
             echo "</tr>";
         }
         echo "</tbody>";

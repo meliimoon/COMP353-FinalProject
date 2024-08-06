@@ -19,19 +19,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $pdo->beginTransaction();
 
         // Insert the new location into the Location table
-        $insertLocation = "INSERT INTO Location (locationName, address, city, province, postalCode, phoneNumber, webAddress, type, capacity) 
-                           VALUES (:locationName, :address, :city, :province, :postalCode, :phoneNumber, :webAddress, :type, :capacity)";
+        $insertLocation = "INSERT INTO Location (locationName, phoneNumber, webAddress, type, capacity) 
+                           VALUES (:locationName, :phoneNumber, :webAddress, :type, :capacity)";
         $stmtLocation = $pdo->prepare($insertLocation);
         $stmtLocation->execute([
             ':locationName' => $locationName,
-            ':address' => $address,
-            ':city' => $city,
-            ':province' => $province,
-            ':postalCode' => $postalCode,
             ':phoneNumber' => $phoneNumber,
             ':webAddress' => $webAddress,
             ':type' => $type,
             ':capacity' => $capacity
+        ]);
+
+        // Get the last inserted locationID
+        $locationID = $pdo->lastInsertId();
+
+        // Insert the location details into the LocationDetails table
+        $insertLocationDetails = "INSERT INTO LocationDetails (postalCode, city, province, address) 
+                                  VALUES (:postalCode, :city, :province, :address)";
+        $stmtLocationDetails = $pdo->prepare($insertLocationDetails);
+        $stmtLocationDetails->execute([
+            ':postalCode' => $postalCode,
+            ':city' => $city,
+            ':province' => $province,
+            ':address' => $address
+        ]);
+
+        // Link the location with its details in the Found_At table
+        $insertFoundAt = "INSERT INTO Found_At (locationID, postalCode) VALUES (:locationID, :postalCode)";
+        $stmtFoundAt = $pdo->prepare($insertFoundAt);
+        $stmtFoundAt->execute([
+            ':locationID' => $locationID,
+            ':postalCode' => $postalCode
         ]);
 
         // Commit the transaction
@@ -39,6 +57,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Close the statement and database connection
         $stmtLocation = null;
+        $stmtLocationDetails = null;
+        $stmtFoundAt = null;
         $pdo = null;
 
         // Redirect to the success page with a message

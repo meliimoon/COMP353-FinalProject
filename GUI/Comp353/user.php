@@ -23,15 +23,18 @@
     <label for="search">Family Member</label>
     <button>Click here</button>
 </form>
-<form class="search" action="" method="post">
+<form class="search" action="clubMember.php" method="post">
     <label for="search">Club Member</label>
     <button>Click here</button>
 </form>
-<form class="search" action="" method="post">
+<form class="search" action="team.php" method="post">
     <label for="search">Team Formation</label>
     <button>Click here</button>
 </form>
-
+<form class="search" action="assignTeam.php" method="post">
+    <label for="search">Assigning Team Formation</label>
+    <button>Click here</button>
+</form>
 
 </body>
 </html>

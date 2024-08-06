@@ -15,7 +15,7 @@
             <button>Display</button>
         </form>
 
-        <form class="search" action="search.php" method="post">
+        <form class="search" action="query8.php" method="post">
             <label for="search">Query 8</label>
             <button>Display</button>
         </form>
@@ -25,7 +25,7 @@
             <button>Display</button>
         </form>
 
-        <form class="search" action="search.php" method="post">
+        <form class="search" action="query10.php" method="post">
             <label for="search">Query 10</label>
             <button>Display</button>
         </form>
@@ -35,7 +35,7 @@
             <button>Display</button>
         </form>
 
-        <form class="search" action="search.php" method="post">
+        <form class="search" action="query12.php" method="post">
             <label for="search">Query 12</label>
             <button>Display</button>
         </form>
@@ -55,7 +55,7 @@
             <button>Display</button>
         </form>
 
-        <form class="search" action="search.php" method="post">
+        <form class="search" action="query16.php" method="post">
             <label for="search">Query 16</label>
             <button>Display</button>
         </form>

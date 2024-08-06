@@ -9,37 +9,41 @@
 <body>
     <div class="form-container">
         <div class="form-wrapper">
-            <h3>Add new Location</h3>
-            <form action="db_files/db_createLocation.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-                
-                <label for="address">Address:</label>
-                <input type="text" id="address" name="address" required><br><br>
-                
-                <label for="city">City:</label>
-                <input type="text" id="city" name="city" required><br><br>
-                
-                <label for="province">Province:</label>
-                <input type="text" id="province" name="province" required><br><br>
-                
-                <label for="postalCode">Postal Code:</label>
-                <input type="text" id="postalCode" name="postalCode" required><br><br>
-                
-                <label for="phoneNumber">Phone Number:</label>
-                <input type="text" id="phoneNumber" name="phoneNumber" required><br><br>
-                
-                <label for="webAddress">Web Address:</label>
-                <input type="url" id="webAddress" name="webAddress" required><br><br>
-                
-                <label for="type">Type:</label>
-                <input type="text" id="type" name="type" required><br><br>
-                
-                <label for="capacity">Capacity:</label>
-                <input type="number" id="capacity" name="capacity" required><br><br>
-                
-                <input type="submit" value="Add Location">
-            </form>
+        <h3>Add new Location</h3>
+<form action="db_files/db_createLocation.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required><br><br>
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required><br><br>
+
+    <label for="province">Province:</label>
+    <input type="text" id="province" name="province" required><br><br>
+
+    <label for="postalCode">Postal Code:</label>
+    <input type="text" id="postalCode" name="postalCode" required><br><br>
+
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" id="phoneNumber" name="phoneNumber" required><br><br>
+
+    <label for="webAddress">Web Address:</label>
+    <input type="url" id="webAddress" name="webAddress" required><br><br>
+
+    <label for="type">Type:</label>
+    <select id="type" name="type" required>
+        <option value="Head">Head</option>
+        <option value="Branch">Branch</option>
+    </select><br><br>
+
+    <label for="capacity">Capacity:</label>
+    <input type="number" id="capacity" name="capacity" required><br><br>
+
+    <input type="submit" value="Add Location">
+</form>
+
         </div>
 
         <div class="form-wrapper">
@@ -84,8 +88,11 @@
                 <label for="webAddress">Edit Web Address:</label>
                 <input type="url" id="webAddress" name="webAddress"><br><br>
                 
-                <label for="type">Edit Type:</label>
-                <input type="text" id="type" name="type" ><br><br>
+                <label for="type">Type:</label>
+    <select id="type" name="type" required>
+        <option value="Head">Head</option>
+        <option value="Branch">Branch</option>
+    </select><br><br>
                 
                 <label for="capacity">Edit Capacity:</label>
                 <input type="number" id="capacity" name="capacity"><br><br>
@@ -98,9 +105,7 @@
             <h3>Display a Location</h3>
             <form action="db_files/db_displayLocation.php" method="post">
                 <label for="locationID">Location ID:</label>
-                <input type="number" id="locationID" name="locationID" required><br><br>
-                
-                
+                <input type="number" id="locationID" name="locationID" required><br><br>  
                 <input type="submit" value="Display Location">
             </form>
         </div>
