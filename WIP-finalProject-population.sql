@@ -63,119 +63,119 @@ INSERT INTO Person (firstName, lastName, dateOfBirth, SSN, medicareCardNumber, t
 ('Davy', 'Jones', '1993-01-25', '384028034', 'M948750', '456-789-1234', 'davyjones@gmail.com'),-- parent of 63
 ('Calipso', 'Jones', '2016-11-03', '930839762', 'M876584', '456-789-1234', 'jonescalipso@gmail.com'),-- child of 62
 ('Ethan', 'Hunt', '1986-08-30', '349488901', 'M764732', '321-456-7890', 'ethanhunt@gmail.com'),-- parent of 65
-('Gary', 'Hunt', '2018-08-30', '345090901', 'M765352', '321-456-7890', 'garyathunt@gmail.com'), --child of 64
-('Max', 'Walker', '2017-09-23', '748385902', 'M553899', '321-789-4561', 'max.walker@gmail.com'), --child of 11
-('Fred', 'Walker', '2019-03-02', '574924119', 'M112395', '321-789-4561', 'fred.walker@gmail.com'), --child of 11
-('Madeline', 'Walker', '2015-04-16', '798348547', 'M784935', '321-789-4561', 'madeline.walker@hotmail.com'), --child of 11
-('Matthew', 'Riehl', '1995-04-22', '738384392', 'M479329', '523-345-7891', 'matthew.riehl@hotmail.com'), --parent to 94, 95, 96, 97
-('Grace', 'Shelby', '1987-05-18', '123678033', 'M893451', '674-238-2348', 'grace.shelby@gmail.com'), --parent to 98, 99, 100, 101
-('Mila', 'Helburg', '1992-01-12', '934578142', 'M423678', '234-567-1290', 'mila.helburg@hotmail.com'), --parent to 102, 103, 104, 105
-('Samuel', 'Lawley', '1979-11-19', '235790572', 'M345792', '789-382-3459', 'samuel.lawley@gmail.com'), --parent to 106, 107, 108, 109
-('Richard', 'Dillon', '1990-08-30', '345789105', 'M234781', '234-897-5345', 'richard.dillon@gmail.com'), --parent to 110, 111, 112, 113
-('Ella', 'Russel', '1988-12-29', '234789982', 'M678234', '765-456-8902', 'ella.russel@hotmail.com'), --parent to 114, 115, 116, 117
-('Aria', 'Stevenson', '1982-01-09', '904823544', 'M045689', '457-345-8914', 'aria.stevenson@gmail.com'), --parent to 118, 119, 120, 121
-('Ava', 'Goldman', '2000-06-15', '234578923', 'M234789', '567-784-5673', 'ava.goldman@hotmail.com'), --parent to 122, 123, 124, 125
-('Michael', 'Hardy', '1988-08-11', '245789890', 'M489237', '789-345-4568', 'michael.hardy@gmail.com'), --parent to 126, 127, 128, 129
-('Tiffany', 'Sapphique', '1996-02-14', '345893406', 'M657893', '295-486-3457', 'tiffany.sapphique@hotmail.com'), --parent to 130, 131, 132, 133
-('Lina', 'Chang', '1990-07-28', '456789023', 'M457891', '456-234-5678', 'lina.chang@gmail.com'), --parent to 134, 135, 136, 137
-('Lia', 'Cho', '2001-06-06', '345790123', 'M635789', '723-689-2389', 'lia.cho@gmail.com'), --parent to 138, 139, 140, 141
-('Kevin', 'Ho', '1989-10-31', '893452349', 'M578934', '589-342-1245', 'kevin.ho@yahoo.com'), --parent to 142, 143, 144, 145
-('Kenny', 'Langley', '2002-12-16', '645789035', 'M345678', '458-345-4568', 'kenny.langley@hotmail.com'), --parent to 146, 147, 148, 149
-('Tyler', 'Tsukino', '2000-10-21', '893457102', 'M345789', '678-345-6783', 'tyler.tsukino@gmail.com'), --parent to 150, 151, 152, 153
-('Hannah', 'Li', '2004-02-10', '345667347', 'M578929', '489-346-5680', 'hannah.li@gmail.com'), --parent to 154, 155, 156, 157
-('Chloe', 'Hastings', '1999-09-12', '456789342', 'M672944', '768-789-3459', 'chloe.hastings@gmail.com'), --parent to 158, 159, 160, 161
-('Martina', 'Sabine', '1976-12-23', '978345546', 'M456723', '569-345-5679', 'martina.sabine@hotmail.com'), --personnel president
-('Arthur', 'Boutin', '1977-11-18', '345689734', 'M456897', '655-678-6459', 'arthur.boutin@gmail.com'), --personnel president
-('Jordan', 'Tubbman', '1980-04-25', '456893490', 'M567893', '358-121-3929', 'jordan.tubbman@gmail.com'), --personnel, parent to 162, 163, 164, 165
-('Zachary', 'Swanson', '1985-05-13', '678991234', 'M589341', '786-867-5678', 'zachary.swanson@hotmail.com'), --personnel president 
-('James', 'Springstein', '1989-08-15', '126784859', 'M568136', '475-578-6894', 'james.springstein@gmail.com'), --personnel president
-('Amelia', 'Frank', '1990-02-22', '678941653', 'M978345', '478-789-3468', 'amelia.frank@hotmail.com'), --personnel president, parent to 166, 167, 168, 169
-('Amy', 'Wesley', '1989-03-14', '289347458', 'M893617', '659-380-5671', 'amy.westly@gmail.com'), --personnel, parent to 170, 171, 172, 173
-('Amanda', 'Stringer', '1991-07-14', '734578512', 'M974312', '574-534-6642', 'amanda.stringer@gmail.com'), --parent to 174, 175, 176, 177
-('Mason', 'Riehl', '2016-05-18', '345690839', 'M570345', '523-345-7891', 'mason.riehl@gmail.com'), --child of 69
-('Nathan', 'Riehl', '2015-03-04', '456089678', 'M567890', '523-345-7891', 'nathan.riehl@gmail.com'), --child of 69
-('Victoria', 'Riehl', '2017-07-23', '396468234', 'M784514', '523-345-7891', 'victoria.riehl@hotmail.com'), --child of 69
-('Eva', 'Riehl', '2019-06-21', '129056486', 'M896556', '523-345-7891', 'eva.riehl@gmail.com'), --child of 69
-('Savannah', 'Jameson', '2015-04-22', '456890768', 'M912845', '674-238-2348', 'savannah.jameson@gmail.com'), --child of 70
-('Sophie', 'Jameson', '2017-10-25', '567892958', 'M578912', '674-238-2348', 'sophie.jameson@hotmail.com'), --child of 70
-('Zack', 'Jameson', '2018-02-27', '695678956', 'M694578', '674-238-2348', 'zack.jameson@gmail.com'), --child of 70
-('Cody', 'Jameson', '2019-12-11', '975602345', 'M567793', '674-238-2348', 'cody.jameson@gmail.com'), --child of 70
-('Sydney', 'Miller', '2015-06-16', '549783457', 'M129045', '234-567-1290', 'sydney.miller@hotmail.com'), --child of 71
-('Olivia', 'Miller', '2016-02-19', '945846265', 'M675856', '234-567-1290', 'olivia.miller@hotmail.com'), --child of 71
-('Nicholas', 'Miller', '2018-06-04', '567890582', 'M574567', '234-567-1290', 'nicholas.miller@hotmail.com'), --child of 71
-('Owen', 'Miller', '2019-09-23', '789456471', 'M120836', '234-567-1290', 'owen.miller@gmail.com'), --child of 71
-('Angela', 'Lawley', '2015-03-25', '120809341', 'M895251', '789-382-3459', 'angela.lawley@gmail.com'), --child of 72
-('Austin', 'Lawley', '2016-06-26', '675212017', 'M902381', '789-382-3459', 'austin.lawley@gmail.com'), --child of 72
-('Brianna', 'Lawley', '2017-11-11', '689579521', 'M235789', '789-382-3459', 'brianna.lawley@hotmail.com'), --child of 72
-('Andrew', 'Lawley', '2019-07-03', '912473534', 'M934721', '789-382-3459', 'andrew,lawley@gmail.com'), --child of 72
-('Alicia', 'Dillon', '2016-10-21', '201947514', 'M248975', '234-897-5345', 'alicia.dillon@hotmail.com'), --child of 73
-('Alexa', 'Dillon', '2018-04-12', '481390756', 'M9357211', '234-897-5345', 'alexa.dillon@gmail.com'), --child of 73
-('Christopher', 'Dillon', '2015-08-19', '945984596', 'M349127', '234-897-5345', 'christopher.dillon@hotmail.com'), --child of 73
-('Daniel', 'Dillon', '2016-06-26', '102480937', 'M509843', '234-897-5345', 'daniel.dillon@gmail.com'), --child of 73
-('Emmanuel', 'Martinez', '2019-02-24', '459134578', 'M724031', '765-456-8902', 'emmanuel.martinez@hotmail.com'), --child of 74
-('Jose', 'Martinez', '2015-02-02', '835782234', 'M149281', '765-456-8902', 'jose.martinez@gmail.com'), --child of 74
-('Rose', 'Martinez', '2016-01-14', '235789255', 'M734347', '765-456-8902', 'rose.martinez@hotmail.com'), --child of 74
-('Sonia', 'Martinez', '2018-08-13', '388838134', 'M488884', '765-456-8902', 'sonia.martinez@gmail.com'), --child of 74
-('Anthony', 'Cox', '2014-07-08', '313890334', 'M756567', '457-345-8914', 'anthony.cox@gmail.com'), --child of 75
-('Angelo', 'Cox', '2016-04-02', '383345513', 'M123314', '457-345-8914', 'angelo.cox@hotmail.com'), --child of 75
-('Jennifer', 'Cox', '2017-10-29', '234978234', 'M634563', '457-345-8914', 'jennifer.cox@hotmail.com'), --child of 75
-('Brittany', 'Cox', '2017-10-29', '121222699', 'M567562', '457-345-8914', 'brittany.cox@gmail.com'), --child of 75
-('Catherine', 'Cooper', '2019-06-01', '454689068', 'M246113', '567-784-5673', 'catherine.cooper@gmail.com'), --child of 76
-('Carter', 'Cooper', '2018-02-12', '357457774', 'M578655', '567-784-5673', 'carter.cooper@gmail.com'), --child of 76
-('Hayden', 'Cooper', '2014-11-11', '335676751', 'M683522', '567-784-5673', 'hayden.cooper@gmail.com'), --child of 76
-('Christina', 'Cooper', '2016-12-06', '112343576', 'M783452', '567-784-5673', 'christina.cooper@gmail.com'), --child of 76
-('Gabriel', 'Hardy', '2014-12-21', '135757845', 'M467434', '789-345-4568', 'gabriel.hardy@hotmail.com'), --child of 77
-('Evan', 'Hardy', '2015-04-23', '934893335', 'M854506', '789-345-4568', 'evan.hardy@hotmail.com'), --child of 77
-('Tatiana', 'Hardy', '2017-07-23', '289357911', 'M734681', '789-345-4568', 'tatiana.hardy@hotmail.com'), --child of 77
-('Sandra', 'Hardy', '2016-12-06', '768934512', 'M856343', '789-345-4568', 'sandra.hardy@hotmail.com'), --child of 77
-('Henry', 'Darwin', '2015-11-11', '678384245', 'M143627', '295-486-3457', 'henry.darwin@gmail.com'), --child of 78
-('Axel', 'Darwin', '2014-08-08', '385686708', 'M567452', '295-486-3457', 'axel.darwin@hotmail.com'), --child of 78
-('Justine', 'Darwin', '2016-10-23', '679964244', 'M356831', '295-486-3457', 'justine.darwin@gmail.com'), --child of 78
-('Natasha', 'Darwin', '2020-01-29', '789955672', 'M876532', '295-486-3457', 'natasha.darwin@hotmail.com'), --child of 78
-('Ella', 'Black', '2014-03-22', '678567234', 'M765214', '456-234-5678', 'ella.black@hotmail.com'), --child of 79
-('Jasmine', 'Black', '2016-11-08', '987564246', 'M678434', '456-234-5678', 'jasmine.black@gmail.com'), --child of 79
-('Jeremy', 'Black', '2017-10-01', '789245667', 'M568234', '456-234-5678', 'jeremy.black@hotmail.com'), --child of 79
-('Isaac', 'Black', '2018-12-04', '695872291', 'M891247', '456-234-5678', 'isaac.black@gmail.com'), --child of 79
-('Julia', 'Soo', '2019-04-27', '235807491', 'M239047', '723-689-2389', 'julia.soo@gmail.com'), --child of 80
-('Kaitlyn', 'Soo', '2014-10-24', '231890345', 'M746891', '723-689-2389', 'kaitlyn.soo@gmail.com'), --child of 80
-('Kevin', 'Soo', '2016-07-30', '123095547', 'M345978', '723-689-2389', 'kevin.soo@gmail.com'), --child of 80
-('Mark', 'Soo', '2018-05-14', '345879342', 'M934581', '723-689-2389', 'mark.soo@gmail.com'), --child of 80
-('Ryan', 'Ho', '2016-06-01', '932455678', 'M346978', '589-342-1245', 'ryan.ho@hotmail.com'), --child of 81
-('Mia', 'Ho', '2014-01-15', '754897924', 'M346931', '589-342-1245', 'mia.ho@hotmail.com'), --child of 81
-('Lily', 'Ho', '2015-09-20', '793568002', 'M381024', '589-342-1245', 'lily.ho@hotmail.com'), --child of 81
-('Nicholas', 'Ho', '2017-10-01', '830123445', 'M842012', '589-342-1245', 'nicholas.ho@gmail.com'), --child of 81
-('Paige', 'Langley', '2014-07-17', '760119043', 'M763401', '458-345-4568', 'paige.langley@hotmail.com'), --child of 82
-('Natalie', 'Langley', '2018-02-12', '831209454', 'M745931', '458-345-4568', 'natalie.langley@hotmail.com'), --child of 82
-('Noel', 'Langley', '2015-04-08', '789569021', 'M680492', '458-345-4568', 'noel.langley@hotmail.com'), --child of 82
-('Abel', 'Langley', '2015-04-08', '156493808', 'M617890', '458-345-4568', 'abel.langley@gmail.com'), --child of 82
-('Cherry', 'Tsukino', '2018-03-28', '756491304', 'M657134', '678-345-6783', 'cherry.tsukino@hotmail.com'), --child of 83
-('Serena', 'Tsukino', '2015-07-10', '120538345', 'M761913', '678-345-6783', 'serena.tsukino@hotmail.com'), --child of 83
-('Mamoru', 'Tsukino', '2016-04-17', '753102345', 'M086983', '678-345-6783', 'mamoru.tsukino@gmail.com'), --child of 83
-('Gurio', 'Tsukino', '2014-09-01', '763498043', 'M561391', '678-345-6783', 'gurio.tsukino@gmail.com'), --child of 83
-('Tiffany', 'Li', '2020-04-06', '701343463', 'M192845', '489-346-5680', 'tiffany.li@hotmail.com'), --child of 84
-('Ariana', 'Li', '2015-08-28', '932784034', 'M210937', '489-346-5680', 'ariana.li@gmail.com'), --child of 84
-('Jackson', 'Li', '2017-11-21', '672449514', 'M671549', '489-346-5680', 'jackson.li@gmail.com'), --child of 84
-('Levi', 'Li', '2014-02-22', '901284453', 'M625398', '489-346-5680', 'levi.li@hotmail.com'), --child of 84
-('Joseph', 'Chapman', '2019-05-09', '281904321', 'M032195', '768-789-3459', 'joseph.chapman@hotmail.com'), --child of 85
-('Elijah', 'Chapman', '2016-01-07', '521834068', 'M821938', '768-789-3459', 'elijah.chapman@gmail.com'), --child of 85
-('Scarlett', 'Chapman', '2017-06-26', '431275823', 'M342978', '768-789-3459', 'scarlett.chapman@gmail.com'), --child of 85
-('Naomi', 'Chapman', '2015-07-30', '193480712', 'M092374', '768-789-3459', 'naomi.chapman@hotmail.com'), --child of 85
-('Aubrey', 'Tubbman', '2019-10-08', '348167593', 'M146978', '358-121-3929', 'aubrey.tubbman@gmail.com'), --child of 88
-('Charlotte', 'Tubbman', '2018-01-25', '901247823', 'M892367', '358-121-3929', 'charlotte.tubbman@hotmail.com'), --child of 88
-('Isaiah', 'Tubbman', '2016-09-14', '234635464', 'M732894', '358-121-3929', 'isaiah.tubbman@hotmail.com'), --child of 88
-('Sebastian', 'Tubbman', '2015-05-12', '820194342', 'M742981', '358-121-3929', 'sebastian.tubbman@hotmail.com'), --child of 88
-('Luna', 'Penns', '2014-11-19', '740123567', 'M735642', '478-789-3468', 'luna.penns@gmail.com'), --child of 91
-('Aurora', 'Penns', '2016-09-12', '123357912', 'M823490', '478-789-3468', 'aurora.penns@hotmail.com'), --child of 91
-('Luke', 'Penns', '2018-11-01', '345312678', 'M543634', '478-789-3468', 'luke.penns@gmail.com'), --child of 91
-('Nolan', 'Penns', '2020-02-19', '934812346', 'M523985', '478-789-3468', 'nolan.penns@hotmail.com'), --child of 91
-('Nora', 'Somerhalder', '2018-11-01', '478329103', 'M924714', '659-380-5671', 'nora.somerhalder@gmail.com'), --child of 92
-('Paul', 'Somerhalder', '2014-08-18', '818345152', 'M579315', '659-380-5671', 'paul.somerhalder@hotmail.com'), --child of 92
-('Ian', 'Somerhalder', '2015-11-02', '891345762', 'M892451', '659-380-5671', 'ian.somerhalder@gmail.com'), --child of 92
-('Nina', 'Somerhalder', '2015-11-02', '134896051', 'M856731', '659-380-5671', 'nina.somerhalder@gmail.com'), --child of 92
-('Paisley', 'Simmons', '2015-06-24', '835143457', 'M896794', '574-534-6642', 'paisley.simmons@hotmail.com'), --child of 93
-('Wyatt', 'Simmons', '2017-01-15', '134524567', 'M568345', '574-534-6642', 'wyatt.simmons@gmail.com'), --child of 93
-('Madison', 'Simmons', '2018-10-11', '568341667', 'M242345', '574-534-6642', 'madison.simmons@gmail.com'), --child of 93
-('Grayson', 'Simmons', '2014-10-13', '579013876', 'M356791', '574-534-6642', 'grayson.simmons@hotmail.com'); --child of 93
+('Gary', 'Hunt', '2018-08-30', '345090901', 'M765352', '321-456-7890', 'garyathunt@gmail.com'), -- child of 64
+('Max', 'Walker', '2017-09-23', '748385902', 'M553899', '321-789-4561', 'max.walker@gmail.com'), -- child of 11
+('Fred', 'Walker', '2019-03-02', '574924119', 'M112395', '321-789-4561', 'fred.walker@gmail.com'), -- child of 11
+('Madeline', 'Walker', '2015-04-16', '798348547', 'M784935', '321-789-4561', 'madeline.walker@hotmail.com'), -- child of 11
+('Matthew', 'Riehl', '1995-04-22', '738384392', 'M479329', '523-345-7891', 'matthew.riehl@hotmail.com'), -- parent to 94, 95, 96, 97
+('Grace', 'Shelby', '1987-05-18', '123678033', 'M893451', '674-238-2348', 'grace.shelby@gmail.com'), -- parent to 98, 99, 100, 101
+('Mila', 'Helburg', '1992-01-12', '934578142', 'M423678', '234-567-1290', 'mila.helburg@hotmail.com'), -- parent to 102, 103, 104, 105
+('Samuel', 'Lawley', '1979-11-19', '235790572', 'M345792', '789-382-3459', 'samuel.lawley@gmail.com'), -- parent to 106, 107, 108, 109
+('Richard', 'Dillon', '1990-08-30', '345789105', 'M234781', '234-897-5345', 'richard.dillon@gmail.com'), -- parent to 110, 111, 112, 113
+('Ella', 'Russel', '1988-12-29', '234789982', 'M678234', '765-456-8902', 'ella.russel@hotmail.com'), -- parent to 114, 115, 116, 117
+('Aria', 'Stevenson', '1982-01-09', '904823544', 'M045689', '457-345-8914', 'aria.stevenson@gmail.com'), -- parent to 118, 119, 120, 121
+('Ava', 'Goldman', '2000-06-15', '234578923', 'M234789', '567-784-5673', 'ava.goldman@hotmail.com'), -- parent to 122, 123, 124, 125
+('Michael', 'Hardy', '1988-08-11', '245789890', 'M489237', '789-345-4568', 'michael.hardy@gmail.com'), -- parent to 126, 127, 128, 129
+('Tiffany', 'Sapphique', '1996-02-14', '345893406', 'M657893', '295-486-3457', 'tiffany.sapphique@hotmail.com'), -- parent to 130, 131, 132, 133
+('Lina', 'Chang', '1990-07-28', '456789023', 'M457891', '456-234-5678', 'lina.chang@gmail.com'), -- parent to 134, 135, 136, 137
+('Lia', 'Cho', '2001-06-06', '345790123', 'M635789', '723-689-2389', 'lia.cho@gmail.com'), -- parent to 138, 139, 140, 141
+('Kevin', 'Ho', '1989-10-31', '893452349', 'M578934', '589-342-1245', 'kevin.ho@yahoo.com'), -- parent to 142, 143, 144, 145
+('Kenny', 'Langley', '2002-12-16', '645789035', 'M345678', '458-345-4568', 'kenny.langley@hotmail.com'), -- parent to 146, 147, 148, 149
+('Tyler', 'Tsukino', '2000-10-21', '893457102', 'M345789', '678-345-6783', 'tyler.tsukino@gmail.com'), -- parent to 150, 151, 152, 153
+('Hannah', 'Li', '2004-02-10', '345667347', 'M578929', '489-346-5680', 'hannah.li@gmail.com'), -- parent to 154, 155, 156, 157
+('Chloe', 'Hastings', '1999-09-12', '456789342', 'M672944', '768-789-3459', 'chloe.hastings@gmail.com'), -- parent to 158, 159, 160, 161
+('Martina', 'Sabine', '1976-12-23', '978345546', 'M456723', '569-345-5679', 'martina.sabine@hotmail.com'), -- personnel president
+('Arthur', 'Boutin', '1977-11-18', '345689734', 'M456897', '655-678-6459', 'arthur.boutin@gmail.com'), -- personnel president
+('Jordan', 'Tubbman', '1980-04-25', '456893490', 'M567893', '358-121-3929', 'jordan.tubbman@gmail.com'), -- personnel, parent to 162, 163, 164, 165
+('Zachary', 'Swanson', '1985-05-13', '678991234', 'M589341', '786-867-5678', 'zachary.swanson@hotmail.com'), -- personnel president 
+('James', 'Springstein', '1989-08-15', '126784859', 'M568136', '475-578-6894', 'james.springstein@gmail.com'), -- personnel president
+('Amelia', 'Frank', '1990-02-22', '678941653', 'M978345', '478-789-3468', 'amelia.frank@hotmail.com'), -- personnel president, parent to 166, 167, 168, 169
+('Amy', 'Wesley', '1989-03-14', '289347458', 'M893617', '659-380-5671', 'amy.westly@gmail.com'), -- personnel, parent to 170, 171, 172, 173
+('Amanda', 'Stringer', '1991-07-14', '734578512', 'M974312', '574-534-6642', 'amanda.stringer@gmail.com'), -- parent to 174, 175, 176, 177
+('Mason', 'Riehl', '2016-05-18', '345690839', 'M570345', '523-345-7891', 'mason.riehl@gmail.com'), -- child of 69
+('Nathan', 'Riehl', '2015-03-04', '456089678', 'M567890', '523-345-7891', 'nathan.riehl@gmail.com'), -- child of 69
+('Victoria', 'Riehl', '2017-07-23', '396468234', 'M784514', '523-345-7891', 'victoria.riehl@hotmail.com'), -- child of 69
+('Eva', 'Riehl', '2019-06-21', '129056486', 'M896556', '523-345-7891', 'eva.riehl@gmail.com'), -- child of 69
+('Savannah', 'Jameson', '2015-04-22', '456890768', 'M912845', '674-238-2348', 'savannah.jameson@gmail.com'), -- child of 70
+('Sophie', 'Jameson', '2017-10-25', '567892958', 'M578912', '674-238-2348', 'sophie.jameson@hotmail.com'), -- child of 70
+('Zack', 'Jameson', '2018-02-27', '695678956', 'M694578', '674-238-2348', 'zack.jameson@gmail.com'), -- child of 70
+('Cody', 'Jameson', '2019-12-11', '975602345', 'M567793', '674-238-2348', 'cody.jameson@gmail.com'), -- child of 70
+('Sydney', 'Miller', '2015-06-16', '549783457', 'M129045', '234-567-1290', 'sydney.miller@hotmail.com'), -- child of 71
+('Olivia', 'Miller', '2016-02-19', '945846265', 'M675856', '234-567-1290', 'olivia.miller@hotmail.com'), -- child of 71
+('Nicholas', 'Miller', '2018-06-04', '567890582', 'M574567', '234-567-1290', 'nicholas.miller@hotmail.com'), -- child of 71
+('Owen', 'Miller', '2019-09-23', '789456471', 'M120836', '234-567-1290', 'owen.miller@gmail.com'), -- child of 71
+('Angela', 'Lawley', '2015-03-25', '120809341', 'M895251', '789-382-3459', 'angela.lawley@gmail.com'), -- child of 72
+('Austin', 'Lawley', '2016-06-26', '675212017', 'M902381', '789-382-3459', 'austin.lawley@gmail.com'), -- child of 72
+('Brianna', 'Lawley', '2017-11-11', '689579521', 'M235789', '789-382-3459', 'brianna.lawley@hotmail.com'), -- child of 72
+('Andrew', 'Lawley', '2019-07-03', '912473534', 'M934721', '789-382-3459', 'andrew,lawley@gmail.com'), -- child of 72
+('Alicia', 'Dillon', '2016-10-21', '201947514', 'M248975', '234-897-5345', 'alicia.dillon@hotmail.com'), -- child of 73
+('Alexa', 'Dillon', '2018-04-12', '481390756', 'M9357211', '234-897-5345', 'alexa.dillon@gmail.com'), -- child of 73
+('Christopher', 'Dillon', '2015-08-19', '945984596', 'M349127', '234-897-5345', 'christopher.dillon@hotmail.com'), -- child of 73
+('Daniel', 'Dillon', '2016-06-26', '102480937', 'M509843', '234-897-5345', 'daniel.dillon@gmail.com'), -- child of 73
+('Emmanuel', 'Martinez', '2019-02-24', '459134578', 'M724031', '765-456-8902', 'emmanuel.martinez@hotmail.com'), -- child of 74
+('Jose', 'Martinez', '2015-02-02', '835782234', 'M149281', '765-456-8902', 'jose.martinez@gmail.com'), -- child of 74
+('Rose', 'Martinez', '2016-01-14', '235789255', 'M734347', '765-456-8902', 'rose.martinez@hotmail.com'), -- child of 74
+('Sonia', 'Martinez', '2018-08-13', '388838134', 'M488884', '765-456-8902', 'sonia.martinez@gmail.com'), -- child of 74
+('Anthony', 'Cox', '2014-07-08', '313890334', 'M756567', '457-345-8914', 'anthony.cox@gmail.com'), -- child of 75
+('Angelo', 'Cox', '2016-04-02', '383345513', 'M123314', '457-345-8914', 'angelo.cox@hotmail.com'), -- child of 75
+('Jennifer', 'Cox', '2017-10-29', '234978234', 'M634563', '457-345-8914', 'jennifer.cox@hotmail.com'), -- child of 75
+('Brittany', 'Cox', '2017-10-29', '121222699', 'M567562', '457-345-8914', 'brittany.cox@gmail.com'), -- child of 75
+('Catherine', 'Cooper', '2019-06-01', '454689068', 'M246113', '567-784-5673', 'catherine.cooper@gmail.com'), -- child of 76
+('Carter', 'Cooper', '2018-02-12', '357457774', 'M578655', '567-784-5673', 'carter.cooper@gmail.com'), -- child of 76
+('Hayden', 'Cooper', '2014-11-11', '335676751', 'M683522', '567-784-5673', 'hayden.cooper@gmail.com'), -- child of 76
+('Christina', 'Cooper', '2016-12-06', '112343576', 'M783452', '567-784-5673', 'christina.cooper@gmail.com'), -- child of 76
+('Gabriel', 'Hardy', '2014-12-21', '135757845', 'M467434', '789-345-4568', 'gabriel.hardy@hotmail.com'), -- child of 77
+('Evan', 'Hardy', '2015-04-23', '934893335', 'M854506', '789-345-4568', 'evan.hardy@hotmail.com'), -- child of 77
+('Tatiana', 'Hardy', '2017-07-23', '289357911', 'M734681', '789-345-4568', 'tatiana.hardy@hotmail.com'), -- child of 77
+('Sandra', 'Hardy', '2016-12-06', '768934512', 'M856343', '789-345-4568', 'sandra.hardy@hotmail.com'), -- child of 77
+('Henry', 'Darwin', '2015-11-11', '678384245', 'M143627', '295-486-3457', 'henry.darwin@gmail.com'), -- child of 78
+('Axel', 'Darwin', '2014-08-08', '385686708', 'M567452', '295-486-3457', 'axel.darwin@hotmail.com'), -- child of 78
+('Justine', 'Darwin', '2016-10-23', '679964244', 'M356831', '295-486-3457', 'justine.darwin@gmail.com'), -- child of 78
+('Natasha', 'Darwin', '2020-01-29', '789955672', 'M876532', '295-486-3457', 'natasha.darwin@hotmail.com'), -- child of 78
+('Ella', 'Black', '2014-03-22', '678567234', 'M765214', '456-234-5678', 'ella.black@hotmail.com'), -- child of 79
+('Jasmine', 'Black', '2016-11-08', '987564246', 'M678434', '456-234-5678', 'jasmine.black@gmail.com'), -- child of 79
+('Jeremy', 'Black', '2017-10-01', '789245667', 'M568234', '456-234-5678', 'jeremy.black@hotmail.com'), -- child of 79
+('Isaac', 'Black', '2018-12-04', '695872291', 'M891247', '456-234-5678', 'isaac.black@gmail.com'), -- child of 79
+('Julia', 'Soo', '2019-04-27', '235807491', 'M239047', '723-689-2389', 'julia.soo@gmail.com'), -- child of 80
+('Kaitlyn', 'Soo', '2014-10-24', '231890345', 'M746891', '723-689-2389', 'kaitlyn.soo@gmail.com'), -- child of 80
+('Kevin', 'Soo', '2016-07-30', '123095547', 'M345978', '723-689-2389', 'kevin.soo@gmail.com'), -- child of 80
+('Mark', 'Soo', '2018-05-14', '345879342', 'M934581', '723-689-2389', 'mark.soo@gmail.com'), -- child of 80
+('Ryan', 'Ho', '2016-06-01', '932455678', 'M346978', '589-342-1245', 'ryan.ho@hotmail.com'), -- child of 81
+('Mia', 'Ho', '2014-01-15', '754897924', 'M346931', '589-342-1245', 'mia.ho@hotmail.com'), -- child of 81
+('Lily', 'Ho', '2015-09-20', '793568002', 'M381024', '589-342-1245', 'lily.ho@hotmail.com'), -- child of 81
+('Nicholas', 'Ho', '2017-10-01', '830123445', 'M842012', '589-342-1245', 'nicholas.ho@gmail.com'), -- child of 81
+('Paige', 'Langley', '2014-07-17', '760119043', 'M763401', '458-345-4568', 'paige.langley@hotmail.com'), -- child of 82
+('Natalie', 'Langley', '2018-02-12', '831209454', 'M745931', '458-345-4568', 'natalie.langley@hotmail.com'), -- child of 82
+('Noel', 'Langley', '2015-04-08', '789569021', 'M680492', '458-345-4568', 'noel.langley@hotmail.com'), -- child of 82
+('Abel', 'Langley', '2015-04-08', '156493808', 'M617890', '458-345-4568', 'abel.langley@gmail.com'), -- child of 82
+('Cherry', 'Tsukino', '2018-03-28', '756491304', 'M657134', '678-345-6783', 'cherry.tsukino@hotmail.com'), -- child of 83
+('Serena', 'Tsukino', '2015-07-10', '120538345', 'M761913', '678-345-6783', 'serena.tsukino@hotmail.com'), -- child of 83
+('Mamoru', 'Tsukino', '2016-04-17', '753102345', 'M086983', '678-345-6783', 'mamoru.tsukino@gmail.com'), -- child of 83
+('Gurio', 'Tsukino', '2014-09-01', '763498043', 'M561391', '678-345-6783', 'gurio.tsukino@gmail.com'), -- child of 83
+('Tiffany', 'Li', '2020-04-06', '701343463', 'M192845', '489-346-5680', 'tiffany.li@hotmail.com'), -- child of 84
+('Ariana', 'Li', '2015-08-28', '932784034', 'M210937', '489-346-5680', 'ariana.li@gmail.com'), -- child of 84
+('Jackson', 'Li', '2017-11-21', '672449514', 'M671549', '489-346-5680', 'jackson.li@gmail.com'), -- child of 84
+('Levi', 'Li', '2014-02-22', '901284453', 'M625398', '489-346-5680', 'levi.li@hotmail.com'), -- child of 84
+('Joseph', 'Chapman', '2019-05-09', '281904321', 'M032195', '768-789-3459', 'joseph.chapman@hotmail.com'), -- child of 85
+('Elijah', 'Chapman', '2016-01-07', '521834068', 'M821938', '768-789-3459', 'elijah.chapman@gmail.com'), -- child of 85
+('Scarlett', 'Chapman', '2017-06-26', '431275823', 'M342978', '768-789-3459', 'scarlett.chapman@gmail.com'), -- child of 85
+('Naomi', 'Chapman', '2015-07-30', '193480712', 'M092374', '768-789-3459', 'naomi.chapman@hotmail.com'), -- child of 85
+('Aubrey', 'Tubbman', '2019-10-08', '348167593', 'M146978', '358-121-3929', 'aubrey.tubbman@gmail.com'), -- child of 88
+('Charlotte', 'Tubbman', '2018-01-25', '901247823', 'M892367', '358-121-3929', 'charlotte.tubbman@hotmail.com'), -- child of 88
+('Isaiah', 'Tubbman', '2016-09-14', '234635464', 'M732894', '358-121-3929', 'isaiah.tubbman@hotmail.com'), -- child of 88
+('Sebastian', 'Tubbman', '2015-05-12', '820194342', 'M742981', '358-121-3929', 'sebastian.tubbman@hotmail.com'), -- child of 88
+('Luna', 'Penns', '2014-11-19', '740123567', 'M735642', '478-789-3468', 'luna.penns@gmail.com'), -- child of 91
+('Aurora', 'Penns', '2016-09-12', '123357912', 'M823490', '478-789-3468', 'aurora.penns@hotmail.com'), -- child of 91
+('Luke', 'Penns', '2018-11-01', '345312678', 'M543634', '478-789-3468', 'luke.penns@gmail.com'), -- child of 91
+('Nolan', 'Penns', '2020-02-19', '934812346', 'M523985', '478-789-3468', 'nolan.penns@hotmail.com'), -- child of 91
+('Nora', 'Somerhalder', '2018-11-01', '478329103', 'M924714', '659-380-5671', 'nora.somerhalder@gmail.com'), -- child of 92
+('Paul', 'Somerhalder', '2014-08-18', '818345152', 'M579315', '659-380-5671', 'paul.somerhalder@hotmail.com'), -- child of 92
+('Ian', 'Somerhalder', '2015-11-02', '891345762', 'M892451', '659-380-5671', 'ian.somerhalder@gmail.com'), -- child of 92
+('Nina', 'Somerhalder', '2015-11-02', '134896051', 'M856731', '659-380-5671', 'nina.somerhalder@gmail.com'), -- child of 92
+('Paisley', 'Simmons', '2015-06-24', '835143457', 'M896794', '574-534-6642', 'paisley.simmons@hotmail.com'), -- child of 93
+('Wyatt', 'Simmons', '2017-01-15', '134524567', 'M568345', '574-534-6642', 'wyatt.simmons@gmail.com'), -- child of 93
+('Madison', 'Simmons', '2018-10-11', '568341667', 'M242345', '574-534-6642', 'madison.simmons@gmail.com'), -- child of 93
+('Grayson', 'Simmons', '2014-10-13', '579013876', 'M356791', '574-534-6642', 'grayson.simmons@hotmail.com'); -- child of 93
 
 
 INSERT INTO Location (locationName, phoneNumber, webAddress, type, capacity) VALUES 
@@ -620,12 +620,12 @@ INSERT INTO Personnel (personID, role, mandate) VALUES
 (22,'Administrator','Salary'),
 (25,'Administrator','Volunteer'),
 (26,'Administrator','Salary'),
-(29,'Trainer','Volunteer'), --familyMember
+(29,'Trainer','Volunteer'), -- familyMember
 (33,'Trainer','Salary'),
 (35,'Other','Salary'),
 (37, 'Trainer', 'Salary'),
 (40,'Trainer','Volunteer'),
-(41,'Trainer','Volunteer'), --familyMember
+(41,'Trainer','Volunteer'), -- familyMember
 (43, 'Trainer','Salary'),
 (44,'Trainer','Volunteer'),
 (45,'Trainer','Volunteer'),
@@ -677,7 +677,7 @@ INSERT INTO Operates(locationID, personID, startDate, endDate) VALUES
 (10,47,'2024-04-10',NULL),
 (7, 88, '2016-06-26', NULL),
 (3, 92, '2014-10-22', NULL),
-(5, 91, '2020-05-04', NULL);;
+(5, 91, '2020-05-04', NULL);
 
 INSERT INTO Registered_At (personID, locationID, startDate, endDate) VALUES
 (1, 1, '2024-05-15', NULL), 
