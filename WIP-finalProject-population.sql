@@ -637,7 +637,20 @@ INSERT INTO Personnel (personID, role, mandate) VALUES
 (89, 'Administrator', 'Volunteer'),
 (90, 'Administrator', 'Salary'),
 (91, 'Administrator', 'Salary'),
-(92, 'Other', 'Volunteer');
+(92, 'Other', 'Volunteer'),
+(1, 'Trainer', 'Volunteer'),
+(2, 'Trainer', 'Salary'),
+(11, 'Other', 'Volunteer'),
+(77, 'Trainer', 'Salary'),
+(52, 'Other', 'Salary'),
+(58, 'Trainer', 'Salary'),
+(79, 'Trainer', 'Volunteer'),
+(31, 'Other', 'Salary'),
+(93, 'Trainer', 'Salary'),
+(50, 'Other', 'Volunteer'),
+(84, 'Trainer', 'Volunteer'),
+(75, 'Trainer', 'Salary'),
+(69, 'Trainer', 'Salary');
 
 INSERT INTO Manages (locationID, personID, startDate, endDate) VALUES
 (1,4,'2022-05-11',NULL),
@@ -677,7 +690,20 @@ INSERT INTO Operates(locationID, personID, startDate, endDate) VALUES
 (10,47,'2024-04-10',NULL),
 (7, 88, '2016-06-26', NULL),
 (3, 92, '2014-10-22', NULL),
-(5, 91, '2020-05-04', NULL);
+(5, 91, '2020-05-04', NULL),
+(1, 1, '2024-05-15', NULL),
+(2, 2, '2024-04-10', NULL),
+(6, 11, '2024-01-02', NULL),
+(7, 77, '2024-05-30', NULL),
+(3, 52, '2023-12-03', NULL),
+(6, 58, '2023-02-28', NULL),
+(9, 79, '2020-01-19', NULL),
+(9, 31, '2023-01-15', NULL),
+(2, 93, '2024-02-15', NULL),
+(2, 50, '2024-06-01', NULL),
+(4, 84, '2020-02-28', NULL),
+(5, 75, '2022-05-05', NULL),
+(10, 69, '2024-03-19', NULL);
 
 INSERT INTO Registered_At (personID, locationID, startDate, endDate) VALUES
 (1, 1, '2024-05-15', NULL), 
