@@ -451,7 +451,7 @@ INSERT INTO Found_At (locationID, postalCode) VALUES
 (10, 'J6W 5H2');
 
 INSERT INTO FamilyMember (personID) VALUES 
-(1), -- (parent's personID)
+(1),
 (2),
 (11),
 (12),
@@ -494,7 +494,7 @@ INSERT INTO FamilyMember (personID) VALUES
 (93);
 
 INSERT INTO ClubMember (personID, gender) VALUES 
-(3, 'Female'), -- (child's ID, gender)
+(3, 'Female'),
 (5, 'Male'),
 (13,'Female'),
 (17, 'Male'),
@@ -608,7 +608,7 @@ INSERT INTO ClubMember (personID, gender) VALUES
 (177, 'Male');
 
 INSERT INTO Personnel (personID, role, mandate) VALUES 
-(4, 'Administrator','Salary'), -- (personID, role, mandate)
+(4, 'Administrator','Salary'),
 (6,'Administrator','Salary'),
 (7,'Administrator','Volunteer'),
 (8,'Administrator','Salary'),
@@ -620,12 +620,12 @@ INSERT INTO Personnel (personID, role, mandate) VALUES
 (22,'Administrator','Salary'),
 (25,'Administrator','Volunteer'),
 (26,'Administrator','Salary'),
-(29,'Trainer','Volunteer'), -- familyMember
+(29,'Trainer','Volunteer'),
 (33,'Trainer','Salary'),
 (35,'Other','Salary'),
 (37, 'Trainer', 'Salary'),
 (40,'Trainer','Volunteer'),
-(41,'Trainer','Volunteer'), -- familyMember
+(41,'Trainer','Volunteer'),
 (43, 'Trainer','Salary'),
 (44,'Trainer','Volunteer'),
 (45,'Trainer','Volunteer'),
@@ -677,7 +677,7 @@ INSERT INTO Operates(locationID, personID, startDate, endDate) VALUES
 (10,47,'2024-04-10',NULL),
 (7, 88, '2016-06-26', NULL),
 (3, 92, '2014-10-22', NULL),
-(5, 91, '2020-05-04', NULL);
+(5, 91, '2020-05-04', NULL);;
 
 INSERT INTO Registered_At (personID, locationID, startDate, endDate) VALUES
 (1, 1, '2024-05-15', NULL), 
@@ -937,7 +937,19 @@ INSERT INTO Team (teamName, headCoachID, gender) VALUES
 ('Team8', 29, 'Female'),
 ('Team9', 41, 'Female'),
 ('Team10', 35, 'Male'),
-('Team11', 2, 'Female');
+('Team11', 2, 'Female'),
+('Team12', 77, 'Male'),
+('Team13', 52, 'Male'),
+('Team14', 1, 'Female'),
+('Team15', 58, 'Male'),
+('Team16', 11, 'Male'),
+('Team17', 79, 'Male'),
+('Team18', 88, 'Male'),
+('Team19', 92, 'Male'),
+('Team20', 31, 'Male'),
+('Team21', 2, 'Female'),
+('Team22', 93, 'Female'),
+('Team23', 50, 'Female');
 
 INSERT INTO Apart_Of (teamName, personID, role, formationDateTime) VALUES
 ('Team1', 3, 'Goalkeeper', '2024-05-18 13:42:15'),
@@ -955,10 +967,56 @@ INSERT INTO Apart_Of (teamName, personID, role, formationDateTime) VALUES
 ('Team6', 55, 'Goalkeeper', '2023-02-21 14:27:39'),
 ('Team7', 20, 'Goalkeeper', '2023-06-22 09:13:22'),
 ('Team7', 57, 'Forward', '2023-06-23 08:34:06'),
-('Team10', 66, 'Goalkeeper', '2024-07-29'),
-('Team10', 67, 'Defender', '2024-07-27'),
-('Team11', 13, 'Midfielder', '2023-11-03'),
-('Team11', 51, 'Goalkeeper', '2024-06-05');
+('Team8', 132, 'Goalkeeper', '2023-08-17 10:15:09'),
+('Team8', 160, 'Midfielder', '2023-08-17 10:20:23'),
+('Team8', 161, 'Defender', '2023-08-17 10:21:58'),
+('Team8', 63, 'Forward', '2023-08-17 10:24:34'),
+('Team9', 96, 'Goalkeeper', '2024-07-22 14:12:48'),
+('Team9', 97, 'Defender', '2024-07-22 14:15:09'),
+('Team9', 138, 'Midfielder', '2024-07-22 14:19:37'),
+('Team10', 66, 'Goalkeeper', '2024-07-29 15:44:21'),
+('Team10', 67, 'Defender', '2024-07-27 12:06:15'),
+('Team10', 124, 'Forward', '2024-07-30 09:35:29'),
+('Team11', 13, 'Midfielder', '2023-11-03 18:52:01'),
+('Team11', 51, 'Goalkeeper', '2024-06-05 11:23:45'),
+('Team12', 114, 'Goalkeeper', '2024-01-06 09:04:12'),
+('Team12', 115, 'Forward', '2024-01-06 09:10:53'),
+('Team12', 126, 'Midfielder', '2024-06-13 12:08:44'),
+('Team13', 112, 'Goalkeeper', '2023-02-24 11:14:56'),
+('Team13', 113, 'Goalkeeper', '2023-02-24 11:22:02'),
+('Team13', 148, 'Forward', '2023-08-30 15:31:23'),
+('Team14', 3, 'Goalkeeper', '2024-06-11 11:47:42'),
+('Team14', 98, 'Midfielder', '2024-06-11 12:35:26'),
+('Team14', 150, 'Defender', '2024-06-11 13:02:14'),
+('Team15', 66, 'Goalkeeper', '2024-07-31 17:09:51'),
+('Team15', 123, 'Defender', '2024-07-31 17:24:37'),
+('Team15', 124, 'Midfielder', '2024-07-31 17:32:49'),
+('Team16', 124, 'Goalkeeper', '2024-08-02 11:07:14'),
+('Team16', 164, 'Defender', '2024-08-02 11:13:43'),
+('Team16', 165, 'Forward', '2024-08-02 11:17:58'),
+('Team17', 32, 'Goalkeeper', '2024-02-26 16:31:37'),
+('Team17', 34, 'Midfielder', '2024-02-26 16:37:44'),
+('Team17', 65, 'Forward', '2024-02-26 16:43:08'),
+('Team18', 66, 'Goalkeeper', '2024-07-12 14:55:59'),
+('Team18', 124, 'Defender', '2024-07-19 09:16:25'),
+('Team18', 67, 'Forward', '2024-07-12 15:03:44'),
+('Team18', 165, 'Midfielder', '2024-07-12 15:12:36'),
+('Team19', 34, 'Goalkeeper', '2024-03-11 17:53:34'),
+('Team19', 136, 'Forward', '2024-03-11 17:58:22'),
+('Team19', 65, 'Midfielder', '2024-07-27 12:39:02'),
+('Team20', 34, 'Defender', '2024-01-14 11:13:04'),
+('Team20', 65, 'Goalkeeper', '2024-08-01 13:28:43'),
+('Team20', 137, 'Forward', '2024-01-14 11:28:15'),
+('Team21', 13, 'Goalkeeper', '2024-06-14 08:42:23'),
+('Team21', 51, 'Midfielder', '2024-06-14 10:21:57'),
+('Team21', 102, 'Defender', '2024-06-14 10:30:08'),
+('Team22', 13, 'Defender', '2024-06-21 11:28:27'),
+('Team22', 51, 'Forward', '2024-06-21 11:33:41'),
+('Team22', 103, 'Goalkeeper', '2024-06-21 11:38:59'),
+('Team22', 176, 'Midfielder', '2024-06-21 11:47:20'),
+('Team23', 13, 'Forward', '2024-07-01 16:10:52'),
+('Team23', 51, 'Defender', '2024-07-01 16:25:46'),
+('Team23', 174, 'Goalkeeper', '2024-07-01 16:32:17');
 
 INSERT INTO Formed_At (teamName, locationID) VALUES
 ('Team1', 1),
@@ -971,7 +1029,19 @@ INSERT INTO Formed_At (teamName, locationID) VALUES
 ('Team8', 8),
 ('Team9', 10),
 ('Team10', 6),
-('Team11', 2);
+('Team11', 2),
+('Team12', 7),
+('Team13', 3),
+('Team14', 1),
+('Team15', 6),
+('Team16', 6),
+('Team17', 9),
+('Team18', 6),
+('Team19', 9),
+('Team20', 9),
+('Team21', 2),
+('Team22', 2),
+('Team23', 2);
 
 INSERT INTO Sessions (sessionType, team1Score, team2Score, sessionStartDateTime, locationID) VALUES
 ('Training', 2, 1, '2024-05-20 11:30:00', 9),
@@ -979,7 +1049,15 @@ INSERT INTO Sessions (sessionType, team1Score, team2Score, sessionStartDateTime,
 ('Game', 2, 4, '2024-08-01 15:00:00', 4),
 ('Game', 3, 1, '2024-07-30 18:30:00', 2),
 ('Game', 2, 3, '2024-08-02', 7),
-('Game', 3, 1, '2024-06-14', 5);
+('Game', 3, 1, '2024-06-14', 5),
+('Game', 1, 3, '2024-07-30 12:00:00', 2),
+('Game', 2, 3, '2024-08-04 14:30:00', 1),
+('Game', 0, 1, '2024-08-05 12:00:00', 2),
+('Game', 2, 4, '2024-08-05 18:00:00', 2),
+('Game', 3, 2, '2024-07-31 19:00:00', 3),
+('Game', 2, 1, '2024-07-14 13:30:00', 6),
+('Game', 5, 3, '2024-07-30 13:00:00', 2),
+('Game', 3, 1, '2024-08-01 17:00:00', 4);
 
 INSERT INTO Plays (sessionNum, teamName1, teamName2) VALUES
 (1, 'Team1', 'Team3'),
@@ -987,4 +1065,12 @@ INSERT INTO Plays (sessionNum, teamName1, teamName2) VALUES
 (3, 'Team3', 'Team6'),
 (4, 'Team4', 'Team5'),
 (5, 'Team10', 'Team7'),
-(6, 'Team6', 'Team11');
+(6, 'Team6', 'Team11'),
+(7, 'Team10', 'Team4'),
+(8, 'Team15', 'Team17'),
+(9, 'Team16', 'Team19'),
+(10, 'Team18', 'Team20'),
+(11, 'Team11', 'Team3'),
+(12, 'Team21', 'Team1'),
+(13, 'Team22', 'Team14'),
+(14, 'Team23', 'Team6');
