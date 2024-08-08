@@ -8,35 +8,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Prepare the SQL query
         $query = "
-       SELECT DISTINCT cm.clubMembershipID, p.firstName, p.lastName, TIMESTAMPDIFF(YEAR, 
- 	p.dateOfBirth, CURDATE()) AS age, p.telephoneNumber, p.emailAddress, l.locationName
-FROM ClubMember cm
-	JOIN Person p ON cm.personID = p.personID
-	JOIN Assignment a ON cm.personID = a.clubMemberID
-	JOIN Location l ON a.locationID = l.locationID
-	JOIN Apart_Of ap ON cm.personID = ap.personID
-	JOIN Team t ON ap.teamName = t.teamName
-	JOIN Plays py ON ap.teamName = py.teamName1 OR ap.teamName = py.teamName2
-	JOIN Sessions s ON py.sessionNum = s.sessionNum
+     SELECT DISTINCT cm.clubMembershipID, p.firstName, p.lastName, 
+    TIMESTAMPDIFF(YEAR, p.dateOfBirth, CURDATE()) AS age,
+    p.telephoneNumber,
+    p.emailAddress,
+    l.locationName AS currentLocationName
+FROM Person p
+JOIN ClubMember cm ON p.personID = cm.personID
+JOIN Assignment a ON cm.personID = a.clubMemberID
+JOIN Location l ON a.locationID = l.locationID
+JOIN Apart_Of ao ON cm.personID = ao.personID
+JOIN Plays py ON ao.teamName = py.teamName1 OR ao.teamName = py.teamName2
+JOIN Sessions s ON py.sessionNum = s.sessionNum
 WHERE TIMESTAMPDIFF(YEAR, p.dateOfBirth, CURDATE()) BETWEEN 4 AND 10
-	AND a.endDate IS NULL
 	AND s.sessionType = 'Game'
-	AND ((s.team1Score > s.team2Score AND ap.teamName = py.teamName1) OR 
-		 (s.team2Score > s.team1Score AND ap.teamName = py.teamName2))
-	AND NOT EXISTS 
-		( 
-			SELECT 1 
-			FROM Plays py2 
-				JOIN Sessions s2 ON py2.sessionNum = s2.sessionNum 
-				JOIN Apart_Of ap2 ON (ap2.teamName = py2.teamName1 OR 
- 					ap2.teamName = py2.teamName2) 			
-			WHERE ap2.personID =cm.personID 
-				AND ((s2.team1Score < s2.team2Score AND ap2.teamName = 
- 					py2.teamName1) OR (s2.team2Score <s2.team1Score AND 
- 					ap2.teamName = py2.teamName2)) 
-		)
+AND cm.personID IN (SELECT personID FROM Apart_Of 
+GROUP BY personID 
+HAVING COUNT(DISTINCT role) = 4)
 ORDER BY l.locationName ASC, cm.clubMembershipID ASC;
-
         ";
 
         $stmt = $pdo->prepare($query);
@@ -66,6 +55,8 @@ ORDER BY l.locationName ASC, cm.clubMembershipID ASC;
 </head>
 <body>
 
+<h3>Search for Club Members</h3>
+
 <h3>Search Results</h3>
 
 <?php
@@ -83,7 +74,7 @@ ORDER BY l.locationName ASC, cm.clubMembershipID ASC;
                 <th>Age</th>
                 <th>Telephone Number</th>
                 <th>Email Address</th>
-                <th>Location Name</th>
+                <th>Current Location Name</th>
               </tr>";
         echo "</thead>";
         echo "<tbody>";
@@ -95,7 +86,7 @@ ORDER BY l.locationName ASC, cm.clubMembershipID ASC;
             echo "<td>" . htmlspecialchars($row["age"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["telephoneNumber"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["emailAddress"]) . "</td>";
-            echo "<td>" . htmlspecialchars($row["locationName"]) . "</td>";
+            echo "<td>" . htmlspecialchars($row["currentLocationName"]) . "</td>";
             echo "</tr>";
         }
         echo "</tbody>";

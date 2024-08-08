@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         LEFT JOIN 
             FamilyMember fm ON p.personID = fm.personID
         LEFT JOIN 
-            Assignment a ON a.clubMemberID = cm.clubMembershipID
+            Assignment a ON a.clubMemberID = p.personID
         LEFT JOIN 
             Person fp ON fp.personID = a.familyMemberID
         LEFT JOIN

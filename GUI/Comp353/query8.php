@@ -71,7 +71,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["familyMemberID"])) {
     <title>Search Secondary Family Members</title>
 </head>
 <body>
+<style>
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+}
 
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    text-align: center;
+}
+</style>
 <h3>Search for Secondary Family Members</h3>
 
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

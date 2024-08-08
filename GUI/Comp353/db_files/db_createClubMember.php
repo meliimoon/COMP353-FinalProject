@@ -40,13 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ]);
         $personID = $pdo->lastInsertId();
 
-        // Insert club member with gender and fetch the newly created clubMembershipID
+        // Insert club member with gender
         $sqlClubMember = "INSERT INTO ClubMember (personID, gender) VALUES (:personID, :gender)";
         $stmtClubMember = $pdo->prepare($sqlClubMember);
         $stmtClubMember->execute([':personID' => $personID, ':gender' => $gender]);
-
-        // Fetch the newly created clubMembershipID
-        $clubMembershipID = $pdo->lastInsertId();
 
         // Insert address details into LocationDetails
         $sqlLocationDetails = "INSERT INTO LocationDetails (postalCode, city, province, address) 
@@ -75,11 +72,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Insert into Assignment
         $sqlAssignment = "INSERT INTO Assignment (familyMemberID, clubMemberID, secondaryID, locationID, startDate, endDate, primaryRelation, secondaryRelation)
-                          VALUES (:familyMemberID, :clubMembershipID, :secondaryID, :locationID, :startDate, :endDate, :primaryRelation, :secondaryRelation)";
+                          VALUES (:familyMemberID, :clubMemberID, :secondaryID, :locationID, :startDate, :endDate, :primaryRelation, :secondaryRelation)";
         $stmtAssignment = $pdo->prepare($sqlAssignment);
         $stmtAssignment->execute([
             ':familyMemberID' => $primaryFamilyMemberID, // Correctly use the primaryFamilyMemberID from the form
-            ':clubMembershipID' => $clubMembershipID,
+            ':clubMemberID' => $personID, // Use personID instead of clubMembershipID
             ':secondaryID' => $secondaryID,
             ':locationID' => $locationID,
             ':startDate' => $startDate,

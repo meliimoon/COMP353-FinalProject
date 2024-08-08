@@ -20,7 +20,7 @@
             <button>Display</button>
         </form>
 
-        <form class="search" action="search.php" method="post">
+        <form class="search" action="query9.php" method="post">
             <label for="search">Query 9</label>
             <button>Display</button>
         </form>
@@ -30,7 +30,7 @@
             <button>Display</button>
         </form>
 
-        <form class="search" action="search.php" method="post">
+        <form class="search" action="query11.php" method="post">
             <label for="search">Query 11</label>
             <button>Display</button>
         </form>
@@ -40,17 +40,17 @@
             <button>Display</button>
         </form>
 
-        <form class="search" action="search.php" method="post">
+        <form class="search" action="query13.php" method="post">
             <label for="search">Query 13</label>
             <button>Display</button>
         </form>
 
-        <form class="search" action="search.php" method="post">
+        <form class="search" action="query14.php" method="post">
             <label for="search">Query 14</label>
             <button>Display</button>
         </form>
 
-        <form class="search" action="search.php" method="post">
+        <form class="search" action="query15.php" method="post">
             <label for="search">Query 15</label>
             <button>Display</button>
         </form>
@@ -60,27 +60,17 @@
             <button>Display</button>
         </form>
 
-        <form class="search" action="search.php" method="post">
+        <form class="search" action="query17.php" method="post">
             <label for="search">Query 17</label>
             <button>Display</button>
         </form>
 
-        <form class="search" action="search.php" method="post">
+        <form class="search" action="query18.php" method="post">
             <label for="search">Query 18</label>
             <button>Display</button>
         </form>
 
-        <form class="search" action="search.php" method="post">
-            <label for="search">Query 19</label>
-            <button>Display</button>
-        </form>
-
-        <form class="search" action="search.php" method="post">
-            <label for="search">Query 20</label>
-            <button>Display</button>
-        </form>
-
-        <form class="search" action="search.php" method="post">
+        <form class="search" action="query21.php" method="post">
             <label for="search">Query 21</label>
             <button>Display</button>
         </form>

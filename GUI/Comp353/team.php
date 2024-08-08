@@ -55,7 +55,6 @@
 
     <input type="submit" value="Create Team Formation">
 </form>
-
         </div>
 
         <div class="form-wrapper">
@@ -79,7 +78,7 @@
     <input type="text" id="currentTeamName1" name="currentTeamName1" required><br><br>
 
     <label for="currentTeamName2">Enter Current Team 2 Name:</label>
-    <input type="text" id="currentTeamName2" name="currentTeamName2"><br><br>
+    <input type="text" id="currentTeamName2" name="currentTeamName2" required><br><br>
 
     <label for="newTeamName1">New Team 1 Name:</label>
     <input type="text" id="newTeamName1" name="newTeamName1"><br><br>
@@ -87,23 +86,8 @@
     <label for="newTeamName2">New Team 2 Name:</label>
     <input type="text" id="newTeamName2" name="newTeamName2"><br><br>
 
-    <label for="newHeadCoachID1">New Head Coach ID for Team 1:</label>
-    <input type="number" id="newHeadCoachID1" name="newHeadCoachID1"><br><br>
-
-    <label for="newHeadCoachID2">New Head Coach ID for Team 2:</label>
-    <input type="number" id="newHeadCoachID2" name="newHeadCoachID2"><br><br>
-
-    <label for="gender">Team Gender:</label>
-    <input type="radio" id="Male" name="gender" value="Male">
-    <label for="Male" style="display: inline;">Male</label>
-    <input type="radio" id="Female" name="gender" value="Female">
-    <label for="Female" style="display: inline;">Female</label><br><br>
-
-    <label for="newLocationID1">New Location ID for Team 1:</label>
-    <input type="number" id="newLocationID1" name="newLocationID1"><br><br>
-
-    <label for="newLocationID2">New Location ID for Team 2:</label>
-    <input type="number" id="newLocationID2" name="newLocationID2"><br><br>
+    <label for="sessionnum">Session Number:</label>
+    <input type="number" id="sessionnum" name="sessionnum" required><br><br>
 
     <label for="sessionLocationID">Session Location ID:</label>
     <input type="number" id="sessionLocationID" name="sessionLocationID"><br><br>
